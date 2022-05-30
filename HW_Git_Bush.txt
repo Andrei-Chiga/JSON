@@ -1,0 +1,281 @@
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git (main)
+$ https://github.com/Andrei-Chiga/JSON.git
+bash: https://github.com/Andrei-Chiga/JSON.git: No such file or directory
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git (main)
+$ git clone https://github.com/Andrei-Chiga/JSON.git
+Cloning into 'JSON'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git (main)
+$ cd/JSON
+bash: cd/JSON: No such file or directory
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git (main)
+$ cd JSON
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ ls -la
+total 5
+drwxr-xr-x 1 User 197121 0 May 30 16:28 ./
+drwxr-xr-x 1 User 197121 0 May 30 16:28 ../
+drwxr-xr-x 1 User 197121 0 May 30 16:28 .git/
+-rw-r--r-- 1 User 197121 6 May 30 16:28 README.md
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ touch new.json
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git snanus
+git: 'snanus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        new.json
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git add new.json
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   new.json
+
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git commit new.json
+Aborting commit due to empty commit message.
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   new.json
+
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git commit new.json -m
+error: switch `m' requires a value
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git commit -m "new file"
+[main 2a7a251] new file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.json
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 273 bytes | 136.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Andrei-Chiga/JSON.git
+   f6ec75a..2a7a251  main -> main
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ vim
+.git/      README.md  new.json
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ vim new.json
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   new.json
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   new.json
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git add new.json
+warning: LF will be replaced by CRLF in new.json.
+The file will have its original line endings in your working directory
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   new.json
+
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git commit -m "new information"
+[main 7278896] new information
+ 1 file changed, 4 insertions(+)
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 349 bytes | 349.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Andrei-Chiga/JSON.git
+   2a7a251..7278896  main -> main
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ ls -la
+total 6
+drwxr-xr-x 1 User 197121  0 May 30 16:50 ./
+drwxr-xr-x 1 User 197121  0 May 30 16:28 ../
+drwxr-xr-x 1 User 197121  0 May 30 16:52 .git/
+-rw-r--r-- 1 User 197121  6 May 30 16:28 README.md
+-rw-r--r-- 1 User 197121 77 May 30 16:50 new.json
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ cat >> preferences.json
+favorit movie : green mile
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ vim preferences.json
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ touch scils.json
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ vim scils.json
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        preferences.json
+        scils.json
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git add .
+warning: LF will be replaced by CRLF in preferences.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in scils.json.
+The file will have its original line endings in your working directory
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   preferences.json
+        new file:   scils.json
+
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git commit
+Aborting commit due to empty commit message.
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ ^C
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git commit -m "new file preferences.json and scils.json"
+[main cbc4aa1] new file preferences.json and scils.json
+ 2 files changed, 6 insertions(+)
+ create mode 100644 preferences.json
+ create mode 100644 scils.json
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 520 bytes | 260.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Andrei-Chiga/JSON.git
+   7278896..cbc4aa1  main -> main
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git fetch
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 1.37 KiB | 0 bytes/s, done.
+From https://github.com/Andrei-Chiga/JSON
+   cbc4aa1..58c87a4  main       -> origin/main
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ git pull
+Updating cbc4aa1..58c87a4
+Fast-forward
+ bug_report.json | 6 ++++++
+ 1 file changed, 6 insertions(+)
+ create mode 100644 bug_report.json
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$ ls -la
+total 13
+drwxr-xr-x 1 User 197121   0 May 30 17:21 ./
+drwxr-xr-x 1 User 197121   0 May 30 16:28 ../
+drwxr-xr-x 1 User 197121   0 May 30 17:21 .git/
+-rw-r--r-- 1 User 197121   6 May 30 16:28 README.md
+-rw-r--r-- 1 User 197121 160 May 30 17:21 bug_report.json
+-rw-r--r-- 1 User 197121  77 May 30 16:50 new.json
+-rw-r--r-- 1 User 197121 132 May 30 17:03 preferences.json
+-rw-r--r-- 1 User 197121  70 May 30 17:05 scils.json
+
+User@WIN-4105NTC9HHC MINGW64 /d/Learn/Git/VadimKsendzov/HW_1_Git/JSON (main)
+$
